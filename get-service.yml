@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: get-service
+  labels:
+    app: get
+spec:
+  selector:
+    app: get
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000

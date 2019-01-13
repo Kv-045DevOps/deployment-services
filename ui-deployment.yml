@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: ui-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ui
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ui
+    spec:
+      containers:
+      - name: ui
+        image: akubrachenko/ui-service:latest
+        ports:
+        - containerPort: 5000
