@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: post
-        image: 100.100.100.100/post-service:2.0
+        image: 100.100.100.100/post-service:2.1
         ports:
         - containerPort: 5001
         env:
