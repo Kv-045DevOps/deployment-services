@@ -7,7 +7,7 @@ metadata:
 data:
   POST_SERVICE_URL: post-service
   VIEW_SERVICE_URL: get-service
-  DB_URL: db-service
-  URL_DB: db-service
-  srmsystem: get-service
+  DB_URL: dbs-service
+  URL_DB: dbs-service
+  srmsystem: db-service
 ...

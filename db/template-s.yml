@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: db-service
+  name: dbs-service
   labels:
     app: db
 spec:
