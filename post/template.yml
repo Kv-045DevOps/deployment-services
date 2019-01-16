@@ -1,3 +1,4 @@
+---
 kind: Service
 apiVersion: v1
 metadata:
@@ -11,7 +12,8 @@ spec:
   - protocol: TCP
     port: 5000
     targetPort: 5000
-
+...
+---
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
@@ -37,3 +39,4 @@ spec:
             configMapKeyRef:
               name: services-address
               key: DB_URL
+...
