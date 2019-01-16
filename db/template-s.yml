@@ -10,8 +10,8 @@ spec:
     app: db
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 5000
+    port: 80
+    targetPort: 5002
 
 ---
 apiVersion: apps/v1
@@ -32,7 +32,7 @@ spec:
       - name: db
         image: akubrachenko/kub-db:1.0
         ports:
-        - containerPort: 5000
+        - containerPort: 5002
         env:
         - name: srmsystem
           valueFrom:

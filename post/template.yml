@@ -10,8 +10,8 @@ spec:
     app: post
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 5000
+    port: 80
+    targetPort: 5001
 
 ---
 apiVersion: apps/v1
@@ -32,7 +32,7 @@ spec:
       - name: post
         image: viacheslavkr/post-service:2.0
         ports:
-        - containerPort: 5000
+        - containerPort: 5001
         env:
         - name: DB_URL
           valueFrom:
