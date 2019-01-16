@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: db
-        image: akubrachenko/kub-db:1.0
+        image: 100.100.100.100/kub-db:1.0
         ports:
         - containerPort: 5002
         env:
