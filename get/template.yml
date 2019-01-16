@@ -1,3 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: get-service
+  labels:
+    app: get
+spec:
+  selector:
+    app: get
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
@@ -17,3 +31,9 @@ spec:
         image: ghostgoose33/get-python:v2
         ports:
         - containerPort: 5000
+        env:
+        - name: URL_DB
+          valueFrom:
+            configMapKeyRef:
+              name: services-address
+              key: URL_DB
