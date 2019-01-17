@@ -5,8 +5,7 @@ metadata:
   namespace: production
   name: services-address
 data:
-  POST_SERVICE_URL: post-service
-  VIEW_SERVICE_URL: get-service
-  DB_URL: db-service
-  URL_DB: db-service
-  #srmsystem: dbase-service
+  POST_SERVICE_URL: post-service.production.svc
+  VIEW_SERVICE_URL: get-service.production.svc
+  DB_URL: db-service.production.svc
+  URL_DB: db-service.production.svc
