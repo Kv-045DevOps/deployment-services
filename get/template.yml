@@ -2,6 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
+  namespace: production
   name: get-service
   labels:
     app: get
@@ -17,6 +18,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: production
   name: get-deployment
 spec:
   selector:
