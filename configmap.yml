@@ -8,4 +8,4 @@ data:
   VIEW_SERVICE_URL: get-service
   DB_URL: db-service
   URL_DB: db-service
-  srmsystem: dbase-service
+  #srmsystem: dbase-service

@@ -30,11 +30,7 @@ spec:
     spec:
       containers:
       - name: post
-<<<<<<< HEAD
         image: viacheslavkr/post-service:2.1
-=======
-        image: 100.100.100.100/post-service:2.1
->>>>>>> b67d8aa088adfa7000a678e4a594fa65d3478a9f
         ports:
         - containerPort: 5001
         env:
