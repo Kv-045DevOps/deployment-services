@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: get
-        image: ghostgoose33/get-python:v2
+        image: ghostgoose33/get-python:v1
         ports:
         - containerPort: 5003
         env:
