@@ -256,16 +256,16 @@ resource "aws_internet_gateway" "mycluster-k8s-local" {
   }
 }
 
-resource "aws_key_pair" "kubernetes-mycluster-k8s-local-a4c397222d156136fb4d01a31c3dfe81" {
-  key_name   = "kubernetes.mycluster.k8s.local-a4:c3:97:22:2d:15:61:36:fb:4d:01:a3:1c:3d:fe:81"
-  public_key = "${file("${path.module}/data/aws_key_pair_kubernetes.mycluster.k8s.local-a4c397222d156136fb4d01a31c3dfe81_public_key")}"
+resource "aws_key_pair" "kubernetes-mycluster-k8s-local-77b415c5deee89707d747d81f47a6e55" {
+  key_name   = "kubernetes.mycluster.k8s.local-77:b4:15:c5:de:ee:89:70:7d:74:7d:81:f4:7a:6e:55"
+  public_key = "${file("${path.module}/data/aws_key_pair_kubernetes.mycluster.k8s.local-77b415c5deee89707d747d81f47a6e55_public_key")}"
 }
 
 resource "aws_launch_configuration" "master-eu-west-1a-masters-mycluster-k8s-local" {
   name_prefix                 = "master-eu-west-1a.masters.mycluster.k8s.local-"
   image_id                    = "ami-01666ac8d55438d0b"
   instance_type               = "t2.small"
-  key_name                    = "${aws_key_pair.kubernetes-mycluster-k8s-local-a4c397222d156136fb4d01a31c3dfe81.id}"
+  key_name                    = "${aws_key_pair.kubernetes-mycluster-k8s-local-77b415c5deee89707d747d81f47a6e55.id}"
   iam_instance_profile        = "${aws_iam_instance_profile.masters-mycluster-k8s-local.id}"
   security_groups             = ["${aws_security_group.masters-mycluster-k8s-local.id}"]
   associate_public_ip_address = true
@@ -288,7 +288,7 @@ resource "aws_launch_configuration" "nodes-mycluster-k8s-local" {
   name_prefix                 = "nodes.mycluster.k8s.local-"
   image_id                    = "ami-01666ac8d55438d0b"
   instance_type               = "t2.small"
-  key_name                    = "${aws_key_pair.kubernetes-mycluster-k8s-local-a4c397222d156136fb4d01a31c3dfe81.id}"
+  key_name                    = "${aws_key_pair.kubernetes-mycluster-k8s-local-77b415c5deee89707d747d81f47a6e55.id}"
   iam_instance_profile        = "${aws_iam_instance_profile.nodes-mycluster-k8s-local.id}"
   security_groups             = ["${aws_security_group.nodes-mycluster-k8s-local.id}"]
   associate_public_ip_address = true
